@@ -31,6 +31,8 @@
 | `review.intake.receive(center, wire)` | 中心实收引用。重复实收同一件返回原引用 |
 | `archive.publication.publish(center, intake_ref, offsets, limit)` | `SignedPublication`，含 `report` 与 `receipt` |
 | `archive.history.read(center, report_id)` | 按原号领取已经签存的 `SignedPublication` |
+| `archive.publication.publish_dial(center, intake_ref, base, direction, travel, limit)` | `SignedDialPublication`，含 `report` 与 `receipt`。见 `DIAL.md` |
+| `archive.history.read_dial(center, report_id)` | 按原号领取已经签存的旋钮 `SignedDialPublication` |
 
 `issue.transport.decode_envelope` 可读取件号、条带、修订和点位声明。V1 JSON 外层含 `version`、`piece_id`、`strip_id`、`revision_id`、`station_map`、`body`。点位声明包含 `names` 和 `positions`，正文的 `stations` 保留实际用点，供中心逐位置核对。其余正文数据随件传输，由离线核定解释。已实收件复用同一件号时必须与原内容一致。
 
