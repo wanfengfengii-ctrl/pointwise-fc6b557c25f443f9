@@ -1,0 +1,13 @@
+{
+  "strip_id": "HC-17",
+  "station_names": ["P4", "P2", "P1", "P3"],
+  "positions": [0, 1, 2, 3],
+  "initial": [[0, 1, 2, 3]],
+  "correction": [[0, 2, 4, 6]],
+  "offsets": [0, 0, 0, 0],
+  "limit": "1",
+  "expected": [
+    {"range": ["1", "1"], "exempt": true},
+    {"range": ["2", "2"], "exempt": false}
+  ]
+}
